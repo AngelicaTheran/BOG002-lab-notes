@@ -1,18 +1,30 @@
-import React from 'react'
-import Sidebar from './Sidebar'
+import React from "react";
+import { useSelector } from "react-redux";
+import NoteScreen from "../notes/NoteScreen";
+import Sidebar from "./Sidebar";
+import NothingSelected from './NothingSelected'
 
- const TaskScreen = () => {
-    return (
-        <div className="task__main-content">
-            
-            <Sidebar/>
+const TaskScreen = () => {
 
-            <main>
-               <h1> Main content</h1> 
-            </main>
+const {active} = useSelector(state => state.notes)
 
-        </div>
-    )
-}
 
-export default TaskScreen
+  return (
+    <div className="task__main-content">
+      <Sidebar />
+
+      <main>
+
+        {
+          (active)
+          ? (<NoteScreen />)
+          :(<NothingSelected /> )
+        }
+        
+        
+      </main>
+    </div>
+  );
+};
+
+export default TaskScreen;
