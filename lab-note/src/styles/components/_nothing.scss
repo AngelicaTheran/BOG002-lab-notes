@@ -1,11 +1,20 @@
 .nothing__main-content {
   align-items: center;
-  background-color: $primary;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2px;
+  height: 90vh;
+  margin-left: 20px;
+  margin-top: 30px;  
+  width: 80vh;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  
 
   p {
     text-align: center;

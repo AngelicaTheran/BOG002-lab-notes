@@ -1,9 +1,9 @@
 .task__main-content {
-  display: flex;
+  display: flex;  
 }
 
 .task__sidebar {
-  background-color: $dark-grey;
+  background-color: $dark-green;
   color: white;
   display: flex;
   flex-direction: column;
@@ -47,8 +47,9 @@
 .task__entry {
   background-color: white;
   border-radius: 4px;
-  color: $dark-grey;
+  color: $dark-green;
   display: flex;
+  justify-content: space-between;
   margin-bottom: 10px;
   overflow: hidden;
 }

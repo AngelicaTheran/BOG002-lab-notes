@@ -1,12 +1,14 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import TaskEntry from "./TaskEntry";
 
 const TaskEntries = () => {
-  const entries = [1, 2, 3, 4, 5];
+  const { notes } = useSelector((state) => state.notes);
+
   return (
     <div className="task__entries">
-      {entries.map((value) => (
-        <TaskEntry key={value} />
+      {notes.map((note) => (
+        <TaskEntry key={note.id} {...note} />
       ))}
     </div>
   );

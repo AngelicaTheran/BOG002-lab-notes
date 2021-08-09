@@ -1,5 +1,5 @@
 .link {
-  color: $dark-grey;
+  color: darken($color: $primary, $amount: 20);
   text-decoration: none;
 
   &:hover {

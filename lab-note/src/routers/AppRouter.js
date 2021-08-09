@@ -11,7 +11,7 @@ import { PrivateRoute } from "./PrivateRoute";
 import TaskScreen from "../components/task/TaskScreen";
 import { login } from "../actions/auth";
 import { PublicRoute } from "./PublicRoute";
-import { loadNotes } from "../helpers/loadNotes";
+import { startLoadingNotes } from "../actions/notes";
 
 
 const AppRouter = () => {
@@ -25,7 +25,8 @@ const AppRouter = () => {
       if (user?.uid) {
         dispatch(login(user.uid, user.displayName));        
         setIsLoggedIn(true);
-        loadNotes(user.uid);
+         
+         dispatch(startLoadingNotes(user.uid));
 
       } else {
         setIsLoggedIn(false);
@@ -35,7 +36,7 @@ const AppRouter = () => {
   }, [dispatch, setChecking, setIsLoggedIn]);
 
   if (checking) {
-    return <h1>Espere...</h1>;
+    return <h1>wait...</h1>;
   }
 
   return (
@@ -49,6 +50,7 @@ const AppRouter = () => {
           <Redirect to="/auth/login" />
         </Switch>
       </div>
+      
     </Router>
   );
 };

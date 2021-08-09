@@ -14,6 +14,7 @@ const {active} = useSelector(state => state.notes)
       <Sidebar />
 
       <main>
+        
 
         {
           (active)
