@@ -43,10 +43,10 @@ const NotesAppBar = () => {
       />
 
       <div>
-        <button className="btn" onClick={handleSave}>
+        <button className="btn btn-save" onClick={handleSave}>
           Save
         </button>
-        <button className="btn" onClick={handlePicture}>
+        <button className="btn btn-picture" onClick={handlePicture}>
           Picture
         </button>
         <button className="btn btn-danger" onClick={handleDelete}>

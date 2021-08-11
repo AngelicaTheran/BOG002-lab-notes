@@ -35,7 +35,7 @@ const handleEntryClick =()=> {
         <p className="task__entry-content">{body}</p>
       </div>
       <div className="task__entry-date-box">
-        <span>{noteDate.format("dddd")}  {noteDate.format("MMM")}</span>
+        <span>{noteDate.format("dddd")}</span>
         <h4>{noteDate.format("Do")}</h4>
       </div>
     </div>

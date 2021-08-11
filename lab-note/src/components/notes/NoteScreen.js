@@ -53,7 +53,7 @@ const NoteScreen = () => {
         {note.url && (
           <div className="notes__image">
             <img
-              src="https://www.mangaforever.net/wp-content/uploads/2017/12/utena.jpg"
+              src={note.url}
               alt="imagen"
             />
           </div>

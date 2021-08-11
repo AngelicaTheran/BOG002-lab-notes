@@ -3,7 +3,7 @@
 }
 
 .task__sidebar {
-  background-color: $dark-green;
+  background-color: blueviolet;
   color: white;
   display: flex;
   flex-direction: column;
@@ -45,9 +45,9 @@
 }
 
 .task__entry {
-  background-color: white;
+  background-color: $dark-green;
   border-radius: 4px;
-  color: $dark-green;
+  color: white;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
